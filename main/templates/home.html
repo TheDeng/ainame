@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+    <link rel="shortcut icon" href="/static/login/icon.ico" />
+	<title>AI自动取名系统</title>
+	<!-- Meta tag Keywords -->
+    <meta name=”Keywords” Content=”AI,自动起名,自动起名,起名系统″>
+    <meta name=”Description” Content=”自动起名系统首页”>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""
+	/>
+<!-- 	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script> -->
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="/static/login/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/static/login/css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+	<!-- //bg effect -->
+	<!-- title -->
+	<h1>AI取名系统</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form action="/genname/" method="post">
+			<h2>请输入至少两个关键字
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<h2>
+				一个关键字是一个汉字或者一个英文字符
+			</h2>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-user"></i>
+					关键字一*
+				</label>
+				<input placeholder="" name="keyword1" type="text"  pattern="[\u4e00-\u9fa5]|[a-zA-Z]" required="">
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					关键字二*
+				</label>
+				<input placeholder="" name="keyword2" type="text"  pattern="[\u4e00-\u9fa5]|[a-zA-Z]" required="" >
+			</div>
+      <div class="form-style-agile">
+        <label>
+          <i class="fas fa-unlock-alt"></i>
+          关键字三
+        </label>
+        <input placeholder="" name="keyword3" type="text" pattern="[\u4e00-\u9fa5]|[a-zA-Z]" >
+      </div>
+      <div class="form-style-agile">
+        <label>
+          <i class="fas fa-unlock-alt"></i>
+          关键字四
+        </label>
+        <input placeholder="" name="keyword4" type="text" pattern="[\u4e00-\u9fa5]|[a-zA-Z]">
+      </div>
+			<!-- checkbox -->
+			<div class="wthree-text">
+				<ul>
+					<!-- <li>
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Stay Signed In</span>
+						</label>
+					</li> -->
+					
+				</ul>
+			</div>
+			<!-- //checkbox -->
+			<input type="submit" value="生 成">
+            {% csrf_token %}
+		</form>
+	</div>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<p>Copyright &copy; 2019.武汉摩小超科技有限公司.All rights reserved.</p>
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	<script src="/static/login/js/jquery-3.3.1.min.js"></script>
+	<!-- //Jquery -->
+
+	<!-- effect js -->
+	<script src="/static/login/js/canva_moving_effect.js"></script>
+	<!-- //effect js -->
+
+</body>
+
+</html>
